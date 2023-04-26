@@ -1,3 +1,4 @@
+<head>
 <style>
 table {
   font-family: arial, sans-serif;
@@ -15,6 +16,23 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 </style>
+  
+<script type="text/javascript"> 
+function display_c(){
+var refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('display_ct()',refresh)
+}
+
+function display_ct() {
+var x = new Date()
+document.getElementById('ct').innerHTML = x;
+display_c();
+}
+</script>
+</head>
+
+<body onload=display_ct();>
+<span id='ct' ></span>
 
 <table>
   <tr>
@@ -25,18 +43,22 @@ tr:nth-child(even) {
   <tr>
     <td>mar</td>
     <td>27h83</td>
+    <td>dans une heure</td>
   </tr>
   <tr>
     <td>mer</td>
     <td>27h83</td>
+    <td>X</td>
   </tr>
   <tr>
     <td>jeu</td>
     <td>27h83</td>
+    <td>55800 secondes après minuit</td>
   </tr>
   <tr>
     <td>ven</td>
     <td>27h83</td>
+    <td>plus tard</td>
   </tr>
   <tr>
     <td>sam</td>
@@ -56,6 +78,8 @@ tr:nth-child(even) {
   </tr>
   <tr>
     <td>autres jours</td>
-    <td>midi moins 60</td>
+    <td>midi moins 75</td>
   </tr>
 </table>
+
+</body>
