@@ -18,6 +18,12 @@ tr:nth-child(even) {
 </style>
   
 <script type="text/javascript"> 
+function pad_time(time) {
+if (len(time+"")=1){
+return "0"+time;
+}
+return time;
+}
 function display_c(){
 var refresh=1000; // Refresh rate in milli seconds
 mytime=setTimeout('display_ct()',refresh)
@@ -25,7 +31,7 @@ mytime=setTimeout('display_ct()',refresh)
 
 function display_ct() {
 var x = new Date()
-document.getElementById('ct').innerHTML = x.getHours()+":"+(x.getMinutes()-2)+":"+x.getSeconds();
+document.getElementById('ct').innerHTML = pad_time(x.getHours())+":"+pad_time(x.getMinutes()-2)+":"+pad_time(x.getSeconds());
 display_c();
 }
 </script>
