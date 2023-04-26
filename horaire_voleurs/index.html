@@ -25,14 +25,13 @@ mytime=setTimeout('display_ct()',refresh)
 
 function display_ct() {
 var x = new Date()
-document.getElementById('ct').innerHTML = x;
+document.getElementById('ct').innerHTML = x.getHours()+":"+(x.getMinutes()-2)+":"+x.getSeconds();
 display_c();
 }
 </script>
 </head>
 
 <body onload=display_ct();>
-<span id='ct' ></span>
 
 <table>
   <tr>
@@ -63,6 +62,7 @@ display_c();
   <tr>
     <td>sam</td>
     <td>27h83</td>
+    <td><span id='ct' ></span></td>
   </tr>
   <tr>
     <td>dim</td>
